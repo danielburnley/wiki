@@ -1,0 +1,20 @@
+{
+  "name": "danielburnley/wiki",
+  "description": "SPA Wiki",
+  "authors": [
+    {
+      "name": "Daniel Burnley",
+      "email": "dandev@pintsize.it"
+    }
+  ],
+  "autoload": {
+    "psr-4": {"Pintsize\\Wiki\\": "src/"}
+  },
+  "autoload-dev": {
+    "psr-4": {"Pintsize\\Wiki\\": "test/"}
+  },
+  "require": {}, 
+  "require-dev": {
+    "phpunit/phpunit": "5.2.*"
+  }
+}
