@@ -3,4 +3,4 @@ php:
   - 7.0
 
 install: composer install --dev
-script: vendor/phpunit/phpunit/phpunit
+script: vendor/phpunit/phpunit/phpunit test/
