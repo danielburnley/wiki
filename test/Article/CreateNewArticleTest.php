@@ -37,6 +37,7 @@ class CreateNewArticleTest extends \PHPUnit_Framework_TestCase
         $this->assertNotEmpty($response->getErrors());
         $this->assertFalse($response->isSuccessful());
         $this->assertErrorReturned($response, $expectedError);
+        $this->assertNull($this->gateway->articleCreated);
     }
 
 
@@ -81,6 +82,19 @@ class CreateNewArticleTest extends \PHPUnit_Framework_TestCase
         $response = $this->createNewArticle->execute($request);
         $this->assertUnsuccessfulResponse($response, CreateNewArticle::ERROR_NO_BODY);
 
+    }
+
+    /**
+     * @test
+     */
+    public function GivenArticleWithTitleAndBody_whenAttemptingToCreateArticle_SuccessfullyPassArticleToGatewayAndReturnSuccessful()
+    {
+        $request = $this->createNewRequest("title", "body");
+
+        $response = $this->createNewArticle->execute($request);
+
+        $this->assertEquals($request->getArticle(), $this->gateway->articleCreated);
+        $this->assertTrue($response->isSuccessful());
     }
 
 }

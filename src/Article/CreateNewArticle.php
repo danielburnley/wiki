@@ -42,6 +42,11 @@ class CreateNewArticle implements UseCase\CreateNewArticle
 
         $this->validateRequest($request, $response);
 
+        if(!$response->hasErrors()) {
+            $this->gateway->createNewArticle($request->getArticle());
+            $response->setSuccessful(true);
+        }
+
         return $response;
     }
 

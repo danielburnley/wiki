@@ -38,6 +38,10 @@ class Response
         $this->errors[] = $error;
     }
 
+    public function hasErrors() {
+        return !empty($this->errors);
+    }
+
     public function isSuccessful()
     {
         return $this->successful;
