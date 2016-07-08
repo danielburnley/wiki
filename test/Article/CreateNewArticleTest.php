@@ -6,10 +6,10 @@
  * Time: 20:32
  */
 
-namespace Pintsize\Wiki\Article;
+namespace danielburnley\Wiki\Article;
 
-use Pintsize\Wiki\Article\CreateNewArticle\Request;
-use Pintsize\Wiki\Article\CreateNewArticle;
+use danielburnley\Wiki\Article\CreateNewArticle\Request;
+use danielburnley\Wiki\Article\CreateNewArticle;
 
 class CreateNewArticleTest extends \PHPUnit_Framework_TestCase
 {
