@@ -7,7 +7,7 @@
  * Time: 19:55
  */
 
-namespace Pintsize\Wiki\Article;
+namespace danielburnley\Wiki\Article;
 
 class Article implements Entity\Article
 {

@@ -6,10 +6,10 @@
  * Time: 18:15
  */
 
-namespace Pintsize\Wiki\Article\CreateNewArticle;
+namespace danielburnley\Wiki\Article\CreateNewArticle;
 
 
-use Pintsize\Wiki\Article\Entity\Article;
+use danielburnley\Wiki\Article\Entity\Article;
 
 class Request
 {

@@ -7,7 +7,7 @@
  * Time: 17:20
  */
 
-namespace Pintsize\Wiki\Article\Entity;
+namespace danielburnley\Wiki\Article\Entity;
 
 interface Article
 {

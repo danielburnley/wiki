@@ -6,7 +6,7 @@
  * Time: 18:33
  */
 
-namespace Pintsize\Wiki\Article\CreateNewArticle;
+namespace danielburnley\Wiki\Article\CreateNewArticle;
 
 
 class Response

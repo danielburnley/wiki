@@ -4,14 +4,14 @@
   "authors": [
     {
       "name": "Daniel Burnley",
-      "email": "dandev@pintsize.it"
+      "email": "dan@danops.uk"
     }
   ],
   "autoload": {
-    "psr-4": {"Pintsize\\Wiki\\": "src/"}
+    "psr-4": {"danielburnley\\Wiki\\": "src/"}
   },
   "autoload-dev": {
-    "psr-4": {"Pintsize\\Wiki\\": "test/"}
+    "psr-4": {"danielburnley\\Wiki\\": "test/"}
   },
   "require": {
     "phpunit/phpunit": "5.3.*"

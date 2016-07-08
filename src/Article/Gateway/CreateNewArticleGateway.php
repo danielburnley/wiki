@@ -6,10 +6,10 @@
  * Time: 20:14
  */
 
-namespace Pintsize\Wiki\Article\Gateway;
+namespace danielburnley\Wiki\Article\Gateway;
 
 
-use Pintsize\Wiki\Article\Entity\Article;
+use danielburnley\Wiki\Article\Entity\Article;
 
 interface CreateNewArticleGateway
 {

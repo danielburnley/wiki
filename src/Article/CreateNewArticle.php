@@ -6,12 +6,12 @@
  * Time: 20:31
  */
 
-namespace Pintsize\Wiki\Article;
+namespace danielburnley\Wiki\Article;
 
 
-use Pintsize\Wiki\Article\CreateNewArticle\Request;
-use Pintsize\Wiki\Article\CreateNewArticle\Response;
-use Pintsize\Wiki\Article\Gateway\CreateNewArticleGateway;
+use danielburnley\Wiki\Article\CreateNewArticle\Request;
+use danielburnley\Wiki\Article\CreateNewArticle\Response;
+use danielburnley\Wiki\Article\Gateway\CreateNewArticleGateway;
 
 class CreateNewArticle implements UseCase\CreateNewArticle
 {
