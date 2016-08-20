@@ -10,9 +10,12 @@ namespace danielburnley\Wiki\Article;
 
 use danielburnley\Wiki\Article\CreateNewArticle\Request;
 use danielburnley\Wiki\Article\CreateNewArticle;
+use danielburnley\Wiki\Article\CreateNewArticle\Response;
 
 class CreateNewArticleTest extends \PHPUnit_Framework_TestCase
 {
+    const TITLE = "title";
+    const BODY = "body";
 
     /** @var CreateNewArticle */
     private $createNewArticle;
@@ -41,6 +44,15 @@ class CreateNewArticleTest extends \PHPUnit_Framework_TestCase
 
 
     /**
+     * @param $response
+     */
+    public function assertArticleCreatedSuccessfully(Response $response)
+    {
+        $this->assertTrue($response->isSuccessful());
+        $this->assertEquals(CreateNewArticleGatewaySpy::ID_CREATED, $response->getIdCreated());
+    }
+
+    /**
      * @param $title
      * @param $body
      * @return Request
@@ -65,7 +77,7 @@ class CreateNewArticleTest extends \PHPUnit_Framework_TestCase
      */
     public function GivenAnArticleWithNoTitle_WhenAttemptingToCreateANewArticle_ThenResponseObjectReturnsTitleNotSetError()
     {
-        $request = $this->createNewRequest(null, "body");
+        $request = $this->createNewRequest(null, self::BODY);
 
         $response = $this->createNewArticle->execute($request);
         $this->assertUnsuccessfulResponse($response, CreateNewArticle::ERROR_NO_TITLE);
@@ -76,11 +88,21 @@ class CreateNewArticleTest extends \PHPUnit_Framework_TestCase
      */
     public function GivenArticleWithNoBody_WhenAttemptingToCreateANewArticle_ThenResponseObjectReturnsBodyNotSetError()
     {
-        $request = $this->createNewRequest("title", null);
+        $request = $this->createNewRequest(self::TITLE, null);
 
         $response = $this->createNewArticle->execute($request);
         $this->assertUnsuccessfulResponse($response, CreateNewArticle::ERROR_NO_BODY);
+    }
 
+    /**
+     * @test
+     */
+    public function GivenArticleWithTitleAndBody_WhenAttemptingToCreateArticle_ThenSuccessfullyCreateArticleAndReturnID()
+    {
+        $request = $this->createNewRequest(self::TITLE, self::BODY);
+
+        $response = $this->createNewArticle->execute($request);
+        $this->assertArticleCreatedSuccessfully($response);
     }
 
 }

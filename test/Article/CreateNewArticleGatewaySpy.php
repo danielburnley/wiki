@@ -14,6 +14,8 @@ use danielburnley\Wiki\Article\Gateway\CreateNewArticleGateway;
 
 class CreateNewArticleGatewaySpy implements CreateNewArticleGateway
 {
+    const ID_CREATED = 9001;
+
 
     /** @var Article */
     public $articleCreated;
@@ -21,5 +23,6 @@ class CreateNewArticleGatewaySpy implements CreateNewArticleGateway
     public function createNewArticle(Article $article)
     {
         $this->articleCreated = $article;
+        return self::ID_CREATED;
     }
 }

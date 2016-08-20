@@ -17,6 +17,9 @@ class Response
     /** @var bool */
     private $successful = false;
 
+    /** @var int */
+    private $idCreated;
+
     /**
      * Response constructor.
      */
@@ -36,6 +39,16 @@ class Response
     public function setError($error)
     {
         $this->errors[] = $error;
+    }
+
+    public function getIdCreated() : int
+    {
+        return $this->idCreated;
+    }
+
+    public function setIdCreated(int $idCreated)
+    {
+        $this->idCreated = $idCreated;
     }
 
     public function isSuccessful()
