@@ -27,7 +27,6 @@ class Article implements Entity\Article
         $this->body = $body;
     }
 
-
     public function getTitle() : string
     {
         return $this->title;

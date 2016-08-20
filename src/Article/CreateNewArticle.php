@@ -41,6 +41,9 @@ class CreateNewArticle implements UseCase\CreateNewArticle
         $response = new Response();
 
         $this->validateRequest($request, $response);
+        if (empty($response->getErrors())) {
+            $this->createArticle($request, $response);
+        }
 
         return $response;
     }
@@ -79,5 +82,16 @@ class CreateNewArticle implements UseCase\CreateNewArticle
     {
         $this->validateTitle($request, $response);
         $this->validateBody($request, $response);
+    }
+
+    /**
+     * @param Request $request
+     * @param $response
+     */
+    public function createArticle(Request $request, Response $response)
+    {
+        $id = $this->gateway->createNewArticle($request->getArticle());
+        $response->setSuccessful(true);
+        $response->setIdCreated($id);
     }
 }
