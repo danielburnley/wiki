@@ -7,7 +7,7 @@
  * Time: 19:55
  */
 
-namespace danielburnley\Wiki\Article;
+namespace danielburnley\Wiki\Core\Article;
 
 class Article implements Entity\Article
 {

@@ -6,11 +6,11 @@
  * Time: 20:32
  */
 
-namespace danielburnley\Wiki\Article;
+namespace danielburnley\Wiki\Core\Article;
 
-use danielburnley\Wiki\Article\CreateNewArticle\Request;
-use danielburnley\Wiki\Article\CreateNewArticle;
-use danielburnley\Wiki\Article\CreateNewArticle\Response;
+use danielburnley\Wiki\Core\Article\CreateNewArticle\Request;
+use danielburnley\Wiki\Core\Article\CreateNewArticle;
+use danielburnley\Wiki\Core\Article\CreateNewArticle\Response;
 
 class CreateNewArticleTest extends \PHPUnit_Framework_TestCase
 {
