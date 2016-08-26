@@ -6,10 +6,10 @@
  * Time: 20:14
  */
 
-namespace danielburnley\Wiki\Article\Gateway;
+namespace danielburnley\Wiki\Core\Article\Gateway;
 
 
-use danielburnley\Wiki\Article\Entity\Article;
+use danielburnley\Wiki\Core\Article\Entity\Article;
 
 interface CreateNewArticleGateway
 {

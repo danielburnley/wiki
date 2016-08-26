@@ -7,7 +7,7 @@
  * Time: 17:20
  */
 
-namespace danielburnley\Wiki\Article\Entity;
+namespace danielburnley\Wiki\Core\Article\Entity;
 
 interface Article
 {

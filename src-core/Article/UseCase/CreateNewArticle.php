@@ -6,10 +6,10 @@
  * Time: 17:19
  */
 
-namespace danielburnley\Wiki\Article\UseCase;
+namespace danielburnley\Wiki\Core\Article\UseCase;
 
-use danielburnley\Wiki\Article\CreateNewArticle\Request;
-use danielburnley\Wiki\Article\CreateNewArticle\Response;
+use danielburnley\Wiki\Core\Article\CreateNewArticle\Request;
+use danielburnley\Wiki\Core\Article\CreateNewArticle\Response;
 
 interface CreateNewArticle
 {

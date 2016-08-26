@@ -6,11 +6,11 @@
  * Time: 18:06
  */
 
-namespace danielburnley\Wiki\Article;
+namespace danielburnley\Wiki\Core\Article;
 
 
-use danielburnley\Wiki\Article\Entity\Article;
-use danielburnley\Wiki\Article\Gateway\CreateNewArticleGateway;
+use danielburnley\Wiki\Core\Article\Entity\Article;
+use danielburnley\Wiki\Core\Article\Gateway\CreateNewArticleGateway;
 
 class CreateNewArticleGatewaySpy implements CreateNewArticleGateway
 {

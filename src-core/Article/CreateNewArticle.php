@@ -6,12 +6,12 @@
  * Time: 20:31
  */
 
-namespace danielburnley\Wiki\Article;
+namespace danielburnley\Wiki\Core\Article;
 
 
-use danielburnley\Wiki\Article\CreateNewArticle\Request;
-use danielburnley\Wiki\Article\CreateNewArticle\Response;
-use danielburnley\Wiki\Article\Gateway\CreateNewArticleGateway;
+use danielburnley\Wiki\Core\Article\CreateNewArticle\Request;
+use danielburnley\Wiki\Core\Article\CreateNewArticle\Response;
+use danielburnley\Wiki\Core\Article\Gateway\CreateNewArticleGateway;
 
 class CreateNewArticle implements UseCase\CreateNewArticle
 {

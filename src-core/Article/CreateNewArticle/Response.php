@@ -6,7 +6,7 @@
  * Time: 18:33
  */
 
-namespace danielburnley\Wiki\Article\CreateNewArticle;
+namespace danielburnley\Wiki\Core\Article\CreateNewArticle;
 
 
 class Response
@@ -51,7 +51,7 @@ class Response
         $this->idCreated = $idCreated;
     }
 
-    public function isSuccessful()
+    public function isSuccessful() : bool
     {
         return $this->successful;
     }

@@ -7,15 +7,26 @@
       "email": "dan@danops.uk"
     }
   ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:clearbooks/dilex.git"
+    }
+  ],
   "autoload": {
-    "psr-4": {"danielburnley\\Wiki\\": "src/"}
+    "psr-4": {
+      "danielburnley\\Wiki\\Core\\": "src-core/"
+    }
   },
   "autoload-dev": {
-    "psr-4": {"danielburnley\\Wiki\\": "test/"}
+    "psr-4": {
+      "danielburnley\\Wiki\\": "test/"
+    }
   },
   "require": {
-    "phpunit/phpunit": "5.3.*"
-  }, 
+    "phpunit/phpunit": "5.3.*",
+    "clearbooks/dilex-jwt": "^1.1"
+  },
   "require-dev": {
   }
 }
