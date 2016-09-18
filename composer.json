@@ -15,7 +15,8 @@
   ],
   "autoload": {
     "psr-4": {
-      "danielburnley\\Wiki\\Core\\": "src-core/"
+      "danielburnley\\Wiki\\Core\\": "src-core/",
+      "danielburnley\\Wiki\\Api\\": "src-api/"
     }
   },
   "autoload-dev": {
